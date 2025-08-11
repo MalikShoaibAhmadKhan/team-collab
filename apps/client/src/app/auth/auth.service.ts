@@ -17,4 +17,10 @@ export class AuthService {
   login(credentials: any): Observable<any> {
     return this.http.post(`${this.apiUrl}/login`, credentials);
   }
+
+  // Helper method to check for the presence of the JWT
+  public isAuthenticated(): boolean {
+    const token = localStorage.getItem('access_token');
+    return !!token; // Returns true if a token exists, false otherwise
+  }
 }
