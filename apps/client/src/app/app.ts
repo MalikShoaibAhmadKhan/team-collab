@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { NxWelcome } from './nx-welcome';
 
 @Component({
-  imports: [NxWelcome, RouterModule],
   selector: 'app-root',
-  templateUrl: './app.html',
+  standalone: true,
+  imports: [RouterModule],
+  template: `<router-outlet></router-outlet>`,
   styleUrl: './app.css',
 })
-export class App {
-  protected title = 'team-collab';
+export class AppComponent {
+  title = 'client';
 }
