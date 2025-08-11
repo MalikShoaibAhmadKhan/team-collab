@@ -1,0 +1,18 @@
+# In docker-compose.yml
+
+version: '3.8' # Specifies the file format version
+
+services:
+  # Define our MongoDB service
+  mongodb:
+    image: mongo:latest # Use the latest official MongoDB image from Docker Hub
+    container_name: team-collab-mongo # A friendly name for our container
+    ports:
+      - "27017:27017" # Map port 27017 on your computer to port 27017 inside the container
+    volumes:
+      - mongo-data:/data/db # Persist database data to a Docker volume named 'mongo-data'
+    
+
+# Define the Docker volumes to ensure data is saved
+volumes:
+  mongo-data:
