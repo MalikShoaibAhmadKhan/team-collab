@@ -17,7 +17,7 @@
     ],
     "sharedGlobals": []
   },
-  "nxCloudId": "6899e9319512de36b9a263fe",
+
   "targetDefaults": {
     "@angular-devkit/build-angular:browser": {
       "cache": true,
